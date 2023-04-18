@@ -10,11 +10,6 @@
      position: relative;
  }
 
- .form input,
- #message {
-     min-width: 50%;
- }
-
  .form label {
      align-self: flex-start;
      font-weight: 500;
@@ -25,7 +20,6 @@
  #message {
      background-color: var(--light-purple);
      border: 0.15rem solid white;
-     height: 2rem;
      padding: 1rem;
      caret-color: white;
      color: white;

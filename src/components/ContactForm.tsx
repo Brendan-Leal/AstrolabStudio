@@ -54,13 +54,13 @@ export default function ContactForm() {
       <h2>Ready For Takeoff?</h2>
       <form onSubmit={handleFormSubmit} action="#" method="POST" className={style.form}>
         <label htmlFor="fname">First Name: </label>
-        <input id="fname" required minLength={1} type="text" name="fname" />
+        <input id="fname" required minLength={1} type="text" name="fname" autoComplete="given-name" />
 
         <label htmlFor="lname"> Last Name: </label>
-        <input required minLength={1} type="text" name="lname" id="lname" />
+        <input required minLength={1} type="text" name="lname" id="lname" autoComplete="family-name" />
 
         <label htmlFor="email">Email: </label>
-        <input required type="email" name="email" id="email" />
+        <input required type="email" name="email" id="email" autoComplete="email" />
 
         <label htmlFor="message">Message: </label>
         <textarea required id={style.message} name="message" />
