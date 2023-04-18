@@ -30,7 +30,6 @@
      caret-color: white;
      color: white;
      border-radius: 30px;
-     font-family: "Poppins";
      font-size: 16px;
      outline: none;
  }
@@ -43,7 +42,7 @@
      font-size: 3rem;
      transform: rotate(-.13turn);
      position: absolute;
-     top: 100%;
+     top: 107%;
      left: 15%;
      right: 85%;
      z-index: 0;
@@ -54,7 +53,21 @@
      top: -300%
  }
 
- /* .form>label {
-     font-weight: 500;
-     padding: 3px 0;
- } */
+ .submitBtn {
+     background-color: var(--light-purple);
+     border: 0.15rem solid var(--accent-purple);
+     padding: 1rem;
+     border-radius: 100px;
+     color: white;
+     margin: 1rem 0;
+     min-width: 8rem;
+     font-size: 1rem;
+     cursor: pointer;
+     align-self: flex-start;
+ }
+
+ .submitBtn:disabled {
+     background-color: hsl(252, 26%, 80%);
+     color: hsl(0, 0%, 40%);
+     cursor: not-allowed;
+ }
