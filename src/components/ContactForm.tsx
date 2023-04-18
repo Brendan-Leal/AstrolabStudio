@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
-import axios, { AxiosError, AxiosResponse } from 'axios';
+import axios from 'axios';
 import style from '../styles/contactForm.module.css';
 
 const FORM_URL = 'https://getform.io/f/48b914c1-2db2-49fa-bec1-0518bdc159e0';
+type GetFormResponse = {
+  success: boolean,
+  formValues: {
+    email: string,
+    fname: string,
+    lname: string,
+    message: string,
+  }
+};
 
 export default function ContactForm() {
   const [serverState, setServerState] = useState({
     submitting: false,
   });
 
-  const [launchAnimation, setLaunchAnimation] = useState('');
+  const [launchRocket, setLaunchRocket] = useState(false);
 
-  const handleServerResponse = (data: AxiosResponse<any, any>, form: HTMLFormElement) => {
+  const handleServerResponse = (data: GetFormResponse, form: HTMLFormElement) => {
     setServerState({
       submitting: false,
     });
@@ -27,16 +36,13 @@ export default function ContactForm() {
     setServerState({ submitting: true });
 
     try {
-      const response = await axios({
-        method: 'post',
-        url: FORM_URL,
-        data: new FormData(form),
+      const { data } = await axios.post<GetFormResponse>(FORM_URL, new FormData(form), {
         headers: { Accept: 'application/json' },
       });
 
-      handleServerResponse(response.data, form);
-      setLaunchAnimation('launch');
-    } catch (err: any | AxiosError) {
+      handleServerResponse(data, form);
+      setLaunchRocket(true);
+    } catch (err: any) {
       if (axios.isAxiosError(err)) {
         handleServerResponse(err.response?.data, form);
       }
@@ -62,11 +68,11 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={serverState.submitting}
-          className="btn-primary"
+          className={style.submitBtn}
         >
           Send
         </button>
-        <div className={`${style.rocket} ${launchAnimation}`}>&#x1F680;</div>
+        <div className={`${style.rocket} ${launchRocket ? style.launch : ''}`}>&#x1F680;</div>
       </form>
     </section>
 
