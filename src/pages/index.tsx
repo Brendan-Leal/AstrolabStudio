@@ -64,6 +64,7 @@ export default function LandingPage() {
           <li>Brand Awareness & Development</li>
           <li>Email Marketing</li>
         </ul>
+        <ContactForm />
       </section>
     </>
   );
