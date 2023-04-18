@@ -20,6 +20,7 @@ body {
 
 main {
   padding: 1rem;
+  margin-bottom: 2em;
 }
 
 h1 {
@@ -38,21 +39,4 @@ ul {
 ul li::before {
   content: "\2605";
   margin: 0 0.5em;
-}
-
-.btn-primary {
-  background-color: var(--light-purple);
-  border: 0.15rem solid var(--accent-purple);
-  padding: 1rem;
-  border-radius: 100px;
-  color: white;
-  margin-top: 1rem;
-  font-size: 1rem;
-  width: 25%;
-  cursor: pointer;
-}
-
-.btn-primary:disabled {
-  background-color: hsl(252, 26%, 80%);
-  color: hsl(0, 0%, 40%);
 }
