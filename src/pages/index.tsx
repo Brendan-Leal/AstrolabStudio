@@ -26,12 +26,14 @@ export default function LandingPage() {
           of the journey.
         </p>
         <div className={style.headshots}>
-          <Image
+          {/* <Image
             src={marisaPfp}
             width={150}
             height={150}
             alt="Marisa headshot"
             className={style.pfp}
+            // priority
+            placeholder="blur"
           />
           <Image
             src={brendanPfp}
@@ -39,7 +41,9 @@ export default function LandingPage() {
             height={150}
             alt="Brendan headshot"
             className={style.pfp}
-          />
+            // priority
+            placeholder="blur"
+          /> */}
         </div>
         <h2>Welcome Aboard</h2>
         <p>
