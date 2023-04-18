@@ -4,29 +4,30 @@
   --light-purple: hsl(252, 26%, 36%);
 }
 
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body,
-html {
-  font-family: "Poppins";
+body {
   font-size: 16px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(56, 78, 117, 1) 20%, var(--purple-bg) 65%);
-  /* background-repeat: no-repeat;
-  background-attachment: scroll; */
+  background-color: black;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(56, 78, 117, 1) 30%, var(--purple-bg) 65%);
   color: white;
+  min-height: 100vh;
+}
+
+main {
+  padding: 1rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-weight: 600;
   font-size: 1.5rem;
 }
 
