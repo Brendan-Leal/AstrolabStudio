@@ -32,7 +32,6 @@ export default function LandingPage() {
             height={150}
             alt="Marisa headshot"
             className={style.pfp}
-            // priority
             placeholder="blur"
           />
           <Image
@@ -41,7 +40,6 @@ export default function LandingPage() {
             height={150}
             alt="Brendan headshot"
             className={style.pfp}
-            // priority
             placeholder="blur"
           />
         </div>
