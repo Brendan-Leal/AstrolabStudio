@@ -1,0 +1,25 @@
+.card {
+    background-color: hsl(251, 23%, 67%);
+    border-radius: 30px;
+    margin: 1rem auto
+}
+
+.card::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: 100%;
+}
+
+.card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    padding: 30px;
+    font-size: 1.25rem;
+}

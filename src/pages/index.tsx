@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Panel from '@/components/Panel';
 import ContactForm from '@/components/ContactForm';
 import brendanPfp from '../../public/brendan-pfp.png';
 import marisaPfp from '../../public/marisa-pfp.png';
@@ -55,6 +56,7 @@ export default function LandingPage() {
           From creating websites to content strategy,
           we&apos;re here to help you take off, online.
         </p>
+        <Panel />
         <h2>How We Can Help</h2>
         <ul>
           <li>Web Development</li>
