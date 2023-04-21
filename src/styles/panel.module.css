@@ -1,0 +1,16 @@
+.panel {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+    .panel {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .panel > * {
+        flex-basis: 100%;
+    }
+}

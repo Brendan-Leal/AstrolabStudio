@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Panel from '@/components/Panel';
 import ContactForm from '@/components/ContactForm';
 import brendanPfp from '../../public/brendan-pfp.png';
 import marisaPfp from '../../public/marisa-pfp.png';
 import style from '../styles/index.module.css';
 
 export default function LandingPage() {
+  const contactFormRef = useRef<HTMLFormElement>(null);
+
+  const scrollToForm = () => {
+    const target = contactFormRef.current;
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Head>
@@ -43,6 +54,9 @@ export default function LandingPage() {
             placeholder="blur"
           />
         </div>
+        <button onClick={scrollToForm} type="button" className="btn1">
+          Send A Transmission
+        </button>
         <h2>Welcome Aboard</h2>
         <p>
           Hi, we&apos;re Marisa and Brendan Leal. Brother and sister duo with a
@@ -55,6 +69,7 @@ export default function LandingPage() {
           From creating websites to content strategy,
           we&apos;re here to help you take off, online.
         </p>
+        <Panel />
         <h2>How We Can Help</h2>
         <ul>
           <li>Web Development</li>
@@ -66,7 +81,7 @@ export default function LandingPage() {
           <li>Brand Awareness & Development</li>
           <li>Email Marketing</li>
         </ul>
-        <ContactForm />
+        <ContactForm ref={contactFormRef} />
       </section>
     </>
   );
