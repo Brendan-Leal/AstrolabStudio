@@ -19,16 +19,19 @@ const CARD_CONTENT = [
 
 export default function Panel() {
   return (
-    <div className={style.panel}>
-      {
-       CARD_CONTENT.map((content) => (
-         <Card
-           content={content.text}
-           key={content.key}
-           count={content.key}
-         />
-       ))
-}
-    </div>
+    <>
+      <h2>Are you ready to blast off?</h2>
+      <div className={style.panel}>
+        {
+          CARD_CONTENT.map((content) => (
+            <Card
+              content={content.text}
+              key={content.key}
+              count={content.key}
+            />
+          ))
+        }
+      </div>
+    </>
   );
 }
