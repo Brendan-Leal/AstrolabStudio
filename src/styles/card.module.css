@@ -7,6 +7,12 @@
     align-items: center;
 }
 
+@media screen and (min-width: 600px) {
+    .card {
+        align-items: flex-start;
+    }
+}
+
 .card::before {
     content: "";
     width: 1px;
@@ -30,6 +36,5 @@
     float: left;
     font-size: 4rem;
     padding: 0 .5rem;
-    shape-outside: ellipse(50% 50%);
     margin-right: 1rem;
 }
