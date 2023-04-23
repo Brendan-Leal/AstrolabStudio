@@ -66,8 +66,9 @@ export default function LandingPage() {
         </p>
         <br />
         <p>
+          <br />
           From creating websites to content strategy,
-          we&apos;re here to help you take off, online.
+          we&apos;re here to help you take off, online. Our strategy is easy as:
         </p>
         <Panel />
         <h2>How We Can Help</h2>
