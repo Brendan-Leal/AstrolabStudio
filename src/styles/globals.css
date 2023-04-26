@@ -1,5 +1,5 @@
 :root {
-  --purple-bg: #22155a;
+  --purple-bg: hsl(251, 62%, 22%);
   --accent-purple: hsl(249, 100%, 93%);
   --light-purple: hsl(252, 26%, 36%);
 }
