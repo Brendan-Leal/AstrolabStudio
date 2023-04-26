@@ -21,15 +21,32 @@ export default function LandingPage() {
   return (
     <>
       <Head>
-        <title>Astrolab Studio</title>
-        <meta name="description" content="From web development to digital strategy, curating and building an online presence is just the beginning. We're here to help every step of the journey." />
+        <title>Astrolab Studio | Digital Marketing and Web Development</title>
+        <meta name="author" content="Brendan Leal" />
+        <meta name="description" content="We create and support websites through our digital marketing services. Copy writing, email marketing, social media, web development and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        {/* Favicon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Facebook Meta Tags  */}
+        <meta property="og:url" content="https://astrolabstudio.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Astrolab Studio | Digital Marketing and Web Development" />
+        <meta property="og:description" content="We build websites and support them through digital marketing. Read more about us and how we can help." />
+        <meta property="og:image" content="https://astrolabstudio/og-image.svg" />
+
+        {/* Twitter Meta Tags  */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://astrolabstudio.com" />
+        <meta name="twitter:title" content="Astrolab Studio | Digital Marketing and Web Development" />
+        <meta name="twitter:description" content="We build websites and support them through digital marketing. Read more about us and how we can help." />
+        <meta name="twitter:image" content="https://astrolabstudio/og-image.svg" />
       </Head>
-      <section className={style.container}>
+      <article className={style.container}>
         <h2>Your Passion, Our Mission</h2>
         <p>
           From web development to digital strategy, curating and building an
@@ -83,7 +100,7 @@ export default function LandingPage() {
           <li>Email Marketing</li>
         </ul>
         <ContactForm ref={contactFormRef} />
-      </section>
+      </article>
     </>
   );
 }
