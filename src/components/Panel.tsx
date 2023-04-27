@@ -19,9 +19,8 @@ const CARD_CONTENT = [
 
 export default function Panel() {
   return (
-    <>
-      <div className={style.panel}>
-        {
+    <div className={style.panel}>
+      {
           CARD_CONTENT.map((content) => (
             <Card
               content={content.text}
@@ -30,8 +29,6 @@ export default function Panel() {
             />
           ))
         }
-      </div>
-      <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>Are you ready to blast off?</h3>
-    </>
+    </div>
   );
 }
