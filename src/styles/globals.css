@@ -2,6 +2,7 @@
   --purple-bg: hsl(251, 62%, 22%);
   --accent-purple: hsl(249, 100%, 93%);
   --light-purple: hsl(252, 26%, 36%);
+  --space-blue: #3f528c;
 }
 
 * {
@@ -50,4 +51,30 @@ ul li::before {
   align-self: center;
   margin: 1.5rem 0;
   font-size: 1rem;
+}
+
+nav {
+  height: 2rem;
+  border-top: 1px solid var(--space-blue);
+  border-bottom: 1px solid var(--space-blue);
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: black;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--light-purple);
+  border-radius: 100px;
+  padding: 0 0.5rem;
+  font-size: 1.09rem;
+}
+
+.activeNav {
+  color: var(--light-purple);
+  background-color: white;
 }
