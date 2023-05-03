@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, Ref } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import style from '../styles/contactForm.module.css';
 
@@ -13,7 +13,7 @@ type GetFormResponse = {
   }
 };
 
-const ContactForm = forwardRef<HTMLFormElement>((props, ref: Ref<HTMLFormElement>) => {
+export default function ContactForm() {
   const [serverState, setServerState] = useState({
     submitting: false,
   });
@@ -53,7 +53,7 @@ const ContactForm = forwardRef<HTMLFormElement>((props, ref: Ref<HTMLFormElement
   return (
     <section className={style.container}>
       <h2>Ready For Takeoff?</h2>
-      <form ref={ref} id={style['contact-form']} onSubmit={handleFormSubmit} action="#" method="POST" className={style.form}>
+      <form id={style['contact-form']} onSubmit={handleFormSubmit} action="#" method="POST" className={style.form}>
         <label htmlFor="fname">First Name: </label>
         <input id="fname" required minLength={1} type="text" name="fname" autoComplete="given-name" />
 
@@ -78,6 +78,4 @@ const ContactForm = forwardRef<HTMLFormElement>((props, ref: Ref<HTMLFormElement
     </section>
 
   );
-});
-
-export default ContactForm;
+}
