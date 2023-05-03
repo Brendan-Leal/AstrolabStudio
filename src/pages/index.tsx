@@ -1,17 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useContext } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Panel from '@/components/Panel';
-import ContactForm from '@/components/ContactForm';
+import FooterContext from '@/Context/FooterContext';
 import brendanPfp from '../../public/brendan-pfp.png';
 import marisaPfp from '../../public/marisa-pfp.png';
 import style from '../styles/index.module.css';
 
 export default function LandingPage() {
-  const contactFormRef = useRef<HTMLFormElement>(null);
+  const footerRef = useContext(FooterContext);
 
   const scrollToForm = () => {
-    const target = contactFormRef.current;
+    const target = footerRef?.current;
 
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
@@ -99,7 +99,6 @@ export default function LandingPage() {
           <li>Brand Awareness & Development</li>
           <li>Email Marketing</li>
         </ul>
-        <ContactForm ref={contactFormRef} />
       </article>
     </>
   );
