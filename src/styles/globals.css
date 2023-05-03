@@ -1,7 +1,7 @@
 :root {
-  --purple-bg: hsl(251, 62%, 22%);
-  --accent-purple: hsl(249, 100%, 93%);
-  --light-purple: hsl(252, 26%, 36%);
+  --purple-bg: #22155b;
+  --accent-purple: #e1dbff;
+  --light-purple: #4d4474;
   --space-blue: #3f528c;
 }
 
@@ -11,17 +11,19 @@
   margin: 0;
 }
 
-body {
+html {
   font-size: 16px;
-  background-color: black;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 3%, rgba(56, 78, 117, 1) 25%, var(--purple-bg));
-  color: white;
-  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(56, 78, 117, 1) 25%, var(--purple-bg));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-main {
-  padding: 1rem;
-  margin-bottom: 2em;
+body {
+  color: white;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
