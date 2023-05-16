@@ -14,7 +14,7 @@
 html {
   font-size: 16px;
   min-height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(56, 78, 117, 1) 30%, var(--purple-bg));
+  background-color: black;
 }
 
 body {
@@ -55,12 +55,13 @@ ul li::before {
   align-self: center;
   margin: 1.5rem 0;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 nav {
   height: 2rem;
-  border-top: 1px solid var(--space-blue);
-  border-bottom: 1px solid var(--space-blue);
+  border-top: 2px solid var(--space-blue);
+  border-bottom: 2px solid var(--space-blue);
   display: flex;
   align-items: center;
   padding: 1.5rem;
@@ -70,14 +71,17 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: white;
-  background-color: var(--light-purple);
+  color: var(--accent-purple);
   border-radius: 100px;
-  padding: 0 0.5rem;
-  font-size: 1.09rem;
+  padding: .25rem 0.5rem;
+  font-size: 1.1rem;
+}
+
+nav a:not(.activeNav):hover {
+  text-decoration: underline;
 }
 
 .activeNav {
-  color: var(--light-purple);
-  background-color: white;
+  color: var(--accent-purple);
+  background-color: var(--light-purple);
 }
