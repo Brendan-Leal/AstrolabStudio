@@ -10,6 +10,7 @@ export default function Header() {
         src={logo}
         alt="logo"
         className={style.logo}
+        priority
       />
       <p>Finding your space online</p>
     </header>
