@@ -2,7 +2,7 @@ import React, { useState, forwardRef, Ref } from 'react';
 import axios from 'axios';
 import style from '../styles/contactForm.module.css';
 
-const FORM_URL = 'https://getform.io/f/48b914c1-2db2-49fa-bec1-0518bdc159e0';
+const FORM_URL = 'https://getform.io/f/939de9fb-faaf-45e8-ace0-c886f8838c70';
 type GetFormResponse = {
   success: boolean,
   formValues: {
