@@ -36,15 +36,16 @@ export default function LandingPage() {
         <meta property="og:url" content="https://astrolabstudio.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Astrolab Studio | Digital Marketing and Web Development" />
-        <meta property="og:description" content="We build websites and support them through digital marketing. Read more about us and how we can help." />
-        <meta property="og:image" content="https://astrolabstudio.com/og-image.svg" />
+        <meta property="og:description" content="Website development and digital marketing. Read more about us and how we can help." />
+        <meta property="og:image" content="https://astrolabstudio.com/OGImage.png" />
 
         {/* Twitter Meta Tags  */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://astrolabstudio.com" />
         <meta name="twitter:title" content="Astrolab Studio | Digital Marketing and Web Development" />
-        <meta name="twitter:description" content="We build websites and support them through digital marketing. Read more about us and how we can help." />
-        <meta name="twitter:image" content="https://astrolabstudio.com/og-image.svg" />
+        <meta name="twitter:description" content="Website development digital marketing. Read more about us and how we can help." />
+        <meta name="twitter:image" content="https://astrolabstudio.com/OGImage.png" />
+
       </Head>
       <article className={style.container}>
         <h2>Your Passion, Our Mission</h2>

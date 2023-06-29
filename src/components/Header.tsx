@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import style from '../styles/header.module.css';
+import logo from '../../public/Astrolab_Studio_Logo_transparent.png';
 
 export default function Header() {
   const nextRouter = useRouter();
@@ -13,12 +15,15 @@ export default function Header() {
   }, [nextRouter.pathname]);
   return (
     <>
+
       <header className={style.header}>
-        <div>
-          <h1><Link href="/">Astrolab Studio</Link></h1>
-          <p>Finding your space online</p>
-        </div>
-        <div className={style.planet}>&#x1FA90;</div>
+        <Image
+          src={logo}
+          alt="logo"
+          className={style.logo}
+          priority
+        />
+        <p>Finding your space online</p>
       </header>
 
       <nav>
