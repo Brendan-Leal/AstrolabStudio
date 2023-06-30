@@ -1,7 +1,7 @@
 import React, { ReactElement, useRef } from 'react';
 import { Poppins } from 'next/font/google';
 import Footer from './Footer';
-import Header from './Header';
+import Nav from './Nav';
 import FooterContext from '../Context/FooterContext';
 import style from '../styles/layout.module.css';
 
@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: ReactElement }) {
   return (
     <div className={`${poppins.className} `}>
       <FooterContext.Provider value={footerRef}>
-        <Header />
+        <Nav />
         <div className={style.background}>
           <main>{children}</main>
           <Footer />
