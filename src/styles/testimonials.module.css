@@ -1,0 +1,36 @@
+.container {
+    background-color: var(--light-purple);
+    border-radius: 0 0 30px 30px;
+    box-shadow: -5px 5px 15px hsla(0, 0%, 0%, 0.281);
+    padding: 10% 8%;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    margin: 2rem 0;
+}
+
+.container a {
+    color: white;
+}
+
+.imgContainer {
+    position: relative;
+    padding: 100px;
+}
+
+
+@media only screen and (min-width: 640px) {
+    .container {
+        padding: 3% 8%;
+    }
+
+    .imgContainer {
+        padding: 240px;
+    }
+}
