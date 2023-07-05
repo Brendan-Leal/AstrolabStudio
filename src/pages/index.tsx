@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Panel from '@/components/Panel';
 import FooterContext from '@/Context/FooterContext';
+import Testimonials from '@/components/Testimonials';
 import brendanPfp from '../../public/brendan-pfp.png';
 import marisaPfp from '../../public/marisa-pfp.png';
 import style from '../styles/index.module.css';
@@ -89,6 +90,7 @@ export default function LandingPage() {
           we&apos;re here to help you take off, online. Our strategy is easy as:
         </p>
         <Panel />
+        <Testimonials />
         <h2>How We Can Help</h2>
         <ul>
           <li>Web Development</li>
