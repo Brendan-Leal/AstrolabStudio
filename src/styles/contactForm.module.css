@@ -1,7 +1,9 @@
  .container {
      text-align: center;
-     margin: 10px;
+     /* margin: 10px; */
+     margin: 0 auto;
      padding: 1.5rem 1.5rem 0;
+     max-width: 50rem;
  }
 
  .form {
@@ -36,9 +38,8 @@
      font-size: 3rem;
      transform: rotate(-.13turn);
      position: absolute;
-     top: 107%;
-     left: 15%;
-     right: 85%;
+     top: 92%;
+     right: 20%;
      z-index: 0;
      transition: 1000ms top cubic-bezier(1, 0, 1, .26);
  }

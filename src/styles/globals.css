@@ -1,7 +1,8 @@
 :root {
-  --purple-bg: hsl(251, 62%, 22%);
-  --accent-purple: hsl(249, 100%, 93%);
-  --light-purple: hsl(252, 26%, 36%);
+  --purple-bg: #22155b;
+  --accent-purple: #e1dbff;
+  --light-purple: #4d4474;
+  --space-blue: #3f528c;
 }
 
 * {
@@ -10,17 +11,21 @@
   margin: 0;
 }
 
-body {
+html {
   font-size: 16px;
+  min-height: 100%;
   background-color: black;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 3%, rgba(56, 78, 117, 1) 25%, var(--purple-bg));
+}
+
+body {
   color: white;
-  min-height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   padding: 1rem;
-  margin-bottom: 2em;
 }
 
 h1 {
@@ -50,4 +55,5 @@ ul li::before {
   align-self: center;
   margin: 1.5rem 0;
   font-size: 1rem;
+  cursor: pointer;
 }
